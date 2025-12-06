@@ -556,10 +556,10 @@ d <- sdmData(formula = species ~.,
 
 m <- sdm(formula = species ~., 
          data = d, 
-         methods = c("maxent"),
-         replications = "boot", # sub, cv
+         methods = "maxent",
+         replications = "boot", 
          test.percent = 30,
-         n = 10) # Number of runs---iterations---replicates
+         n = 10) 
 getEvaluation(m)
 #Predicting current distribution
 p <- predict(m, preds_used, mean = T)
@@ -2804,6 +2804,7 @@ Soil_carbon<-geodata::soil_af(var = 'SOC', depth = '5',
 Soil_carbon<-geodata::soil_af(var = 'SOC', depth = '15', 
                               path = 'data/Soil/soil_af/soil_carbon', 
                               download = TRUE)
+
 
 
 
